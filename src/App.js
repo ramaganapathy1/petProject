@@ -5,7 +5,7 @@ import { DashBoard } from "./components/Dashboard";
 
 function App() {
   return (
-    <Box>
+    <Box borderWidth="1px" borderRadius="lg">
       <VStack padding={5} w={"100%"} h={"100%"}>
         <Box
           w="100%"
@@ -17,12 +17,20 @@ function App() {
           <Flex>
             <MenuBar />
             <Box p="2">
-              <Heading size="md">Title</Heading>
+              <Heading size="md" color="teal">
+                Title
+              </Heading>
             </Box>
           </Flex>
         </Box>
         <Divider />
-        <Box w="100%" p={4} backgroundColor={"white"}>
+        <Box
+          w="100%"
+          p={4}
+          backgroundColor={"white"}
+          borderWidth="1px"
+          borderRadius="lg"
+        >
           <DashBoard />
         </Box>
       </VStack>

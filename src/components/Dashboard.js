@@ -4,7 +4,6 @@ import {
   Button,
   Card,
   CardBody,
-  CardFooter,
   CardHeader,
   Flex,
   Heading,
@@ -25,6 +24,7 @@ import {
   MdAdd,
   MdEMobiledata,
 } from "react-icons/md";
+import Estimater from "./Estimate";
 
 export const DashBoard = () => {
   const toast = useToast();
@@ -51,22 +51,7 @@ export const DashBoard = () => {
         spacing={4}
         templateColumns="repeat(auto-fill, minmax(20rem, 1fr))"
       >
-        <Card onClick={callToast}>
-          <CardHeader>
-            <Heading size="md">
-              <Icon as={MdAdd} />
-              New Estimate
-            </Heading>
-          </CardHeader>
-          <CardBody>
-            <Text>
-              View a summary of all your customers over the last month.
-            </Text>
-          </CardBody>
-          {/* <CardFooter>
-          <Button leftIcon={<MdAdd size={"20px"} />}>Add New</Button>
-        </CardFooter> */}
-        </Card>
+        <Estimater />
         <Card onClick={callToast}>
           <CardHeader>
             <Heading size="md">
